@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 interface WorkspaceIdPageProps {
-	params: {
-		workspaceId: string;
-	};
+  params: {
+    workspaceId: string;
+  };
 }
 
 const WorkspaceIdPage: React.FC<WorkspaceIdPageProps> = ({ params }) => {
-	return <div>WorkspaceIdPage = {params.workspaceId}</div>;
+  return <div>Workspace id page</div>;
 };
 
 export default WorkspaceIdPage;
