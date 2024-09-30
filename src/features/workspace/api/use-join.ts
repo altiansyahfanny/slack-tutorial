@@ -10,11 +10,11 @@ type Options = {
 	throwError?: boolean;
 };
 
-type RequestType = {name: string; workspaceId: Id<'workspaces'>};
-type ResponseType = Id<'channels'> | null;
+type RequestType = {workspaceId: Id<'workspaces'>, joinCode: string };
+type ResponseType = Id<'workspaces'> | null;
 type StatusType = 'pending' | 'success' | 'error' | 'settled' | null;
 
-export const useCreateChannel = () => {
+export const useJoin = () => {
 	const [data, setData] = useState<ResponseType>(null);
 	const [error, setError] = useState<Error | null>(null);
 
@@ -25,7 +25,7 @@ export const useCreateChannel = () => {
 	const isError = useMemo(() => status === 'error', [status]);
 	const isSettled = useMemo(() => status === 'settled', [status]);
 
-	const mutation = useMutation(api.channels.create);
+	const mutation = useMutation(api.workspaces.join);
 
 	const mutate = useCallback(
 		async (values: RequestType, options?: Options) => {

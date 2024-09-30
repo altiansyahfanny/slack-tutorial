@@ -31,8 +31,10 @@ const UserButton = () => {
   const avatarFallback = name!.charAt(0).toUpperCase();
 
   const handleSignOut = async () => {
-    await signOut();
-    router.push("/auth");
+    await signOut().then(() => {
+      console.log("success sign out");
+      router.push("/auth");
+    });
   };
 
   return (
