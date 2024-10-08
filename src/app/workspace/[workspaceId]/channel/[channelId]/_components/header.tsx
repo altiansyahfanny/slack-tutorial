@@ -95,7 +95,7 @@ const Header = ({ title }: HeaderProps) => {
           <DialogTrigger asChild>
             <Button
               variant={"ghost"}
-              className="text-lg font-semibold px-2 overflow-hidden w-auto"
+              className="text-lg font-semibold tracking-tight text-slate-800 px-2 overflow-hidden w-auto"
             >
               <span className="truncate"># {title}</span>
               <FaChevronDown className="size-2.5 ml-2" />

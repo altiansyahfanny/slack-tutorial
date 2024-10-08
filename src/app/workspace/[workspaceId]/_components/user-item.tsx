@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Id } from "../../../../../convex/_generated/dataModel";
 
 const userItemVariants = cva(
-  "flex items-center gap-1.5 justify-start font-normal h-7 px-4 text-sm overflow-hidden",
+  "flex items-center gap-1.5 justify-start font-normal h-7 text-sm overflow-hidden",
   {
     variants: {
       variant: {
@@ -39,13 +39,17 @@ const UserItem = ({ id, image, label = "Member", variant }: UserItemProps) => {
       asChild
     >
       <Link href={`/workspace/${workspaceId}/member/${id}`}>
-        <Avatar className="size-5 rounded-md mr-1">
-          <AvatarImage src={image} className="rounded-md"></AvatarImage>
-          <AvatarFallback className="rounded-md bg-sky-500 text-white text-xs">
-            {avatarFallback}
-          </AvatarFallback>
-        </Avatar>
-        <span className="text-sm truncate">{label}</span>
+        <div className="ml-0.5">
+          <Avatar className="size-6 rounded-md">
+            <AvatarImage src={image} className="rounded-md"></AvatarImage>
+            <AvatarFallback className="rounded-md bg-sky-500 text-white text-xs">
+              {avatarFallback}
+            </AvatarFallback>
+          </Avatar>
+        </div>
+        <div className="">
+          <span className="text-sm truncate">{label}</span>
+        </div>
       </Link>
     </Button>
   );

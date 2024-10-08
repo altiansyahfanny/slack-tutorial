@@ -15,7 +15,12 @@ const Sidebar = () => {
         label="Home"
         isActive={pathname.includes("/workspace")}
       />
-      <SidebarButton icon={MessagesSquare} label="DMs" />
+      <SidebarButton
+        icon={MessagesSquare}
+        label="DMs"
+        href="/learn"
+        isActive={pathname.includes("/learn")}
+      />
       <SidebarButton icon={Bell} label="Activity" />
       <SidebarButton icon={MoreHorizontal} label="More" />
       <div className="flex flex-col items-center justify-center gap-y-1 mt-auto">

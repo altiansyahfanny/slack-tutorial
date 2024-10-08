@@ -9,7 +9,7 @@ import React, { useEffect, useState } from "react";
 import { Id } from "../../../../../../convex/_generated/dataModel";
 import { toast } from "sonner";
 import { useDebugConversation } from "@/features/conversation/api/use-debug-conversation";
-import Conversation from "./components/conversation";
+import Conversation from "./_components/conversation";
 
 const MemberIdPage = () => {
   const workspaceId = useWorkspaceId();

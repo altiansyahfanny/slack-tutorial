@@ -7,7 +7,7 @@ import Link from "next/link";
 import { IconType } from "react-icons/lib";
 
 const sidebarItemVariants = cva(
-  "flex items-center gap-1.5 justify-start font-normal h-7 px-[18px] text-sm overflow-hidden",
+  "flex items-center gap-1.5 justify-start font-normal h-7 px-[18px]m px-3.5 text-sm overflow-hidden",
   {
     variants: {
       variant: {
@@ -38,7 +38,10 @@ const SidebarItem = ({ icon: Icon, id, label, variant }: SidebarItemProps) => {
       className={cn(sidebarItemVariants({ variant }))}
     >
       <Link href={`/workspace/${workspaceId}/channel/${id}`}>
-        <Icon className="size-3.5 mr-1 shrink-0" />
+        <div className="rounded-md p-0.5 size-6 grid place-content-center">
+          <Icon className="size-4 shrink-0" />
+        </div>
+
         <span className="text-sm truncate">{label}</span>
       </Link>
     </Button>

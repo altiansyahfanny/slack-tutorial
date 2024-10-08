@@ -228,7 +228,7 @@ const Message = ({
             <div className="flex flex-col w-full overflow-hidden">
               <div className="text-sm">
                 <button
-                  className="font-bold hover:underline text-primary"
+                  className="font-semibold hover:underline text-primary"
                   onClick={() => onOpenProfile(memberId)}
                 >
                   {authorName}

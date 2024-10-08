@@ -5,8 +5,8 @@ import Loader from "@/components/loader";
 import { useGetChannel } from "@/features/channel/api/use-get-channel";
 import { useGetMessages } from "@/features/message/api/use-get-mesagges";
 import { useChannelId } from "@/hooks/use-channel-id";
-import ChatInput from "./components/chat-input";
-import Header from "./components/header";
+import ChatInput from "./_components/chat-input";
+import Header from "./_components/header";
 import MessageList from "@/components/message-list";
 
 const ChannelIdPage = () => {

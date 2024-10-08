@@ -30,7 +30,7 @@ const Toolbar = ({
   isPending,
 }: ToolbarProps) => {
   return (
-    <div className="absolute top-0 right-5">
+    <div className="absolute right-1 top-1">
       <div className="group-hover:opacity-100 opacity-0 transition-opacity border bg-white rounded-md shadow-sm">
         <EmojiPopover
           hint="Add reaction"

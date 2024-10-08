@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useGetWorkspace } from "@/features/workspace/api/use-get-workspace";
 import { useWorkspaceId } from "@/hooks/use-workspace-id";
-import { Calendar, Info, Search } from "lucide-react";
-import React, { useState } from "react";
+import { Info, Search } from "lucide-react";
+import { useState } from "react";
 
 import {
-  Command,
   CommandDialog,
   CommandEmpty,
   CommandGroup,
@@ -13,13 +12,10 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
 } from "@/components/ui/command";
 import { useGetChannels } from "@/features/channel/api/use-get-channels";
 import { useGetMembers } from "@/features/member/api/use-get-members";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { channel } from "diagnostics_channel";
 import { Id } from "../../../../../convex/_generated/dataModel";
 
 const Toolbar = () => {

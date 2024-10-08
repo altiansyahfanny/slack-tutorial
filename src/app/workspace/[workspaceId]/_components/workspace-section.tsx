@@ -22,7 +22,7 @@ const WorkspaceSection = ({
   const [on, toogle] = useToggle(true);
 
   return (
-    <div className="flex flex-col mt-3 px-2">
+    <div className="flex flex-col mt-3 px-2 gap-y-1">
       <div className="flex items-center px-3.5 group">
         <Button
           variant={"tranparent"}
@@ -36,13 +36,17 @@ const WorkspaceSection = ({
             )}
           />
         </Button>
-        <Button
+        {/* <Button
           variant={"tranparent"}
           size={"sm"}
-          className="group px-1.5 text-sm text-[#F9EDFFCC] h-[28px] justify-start overflow-hidden items-center"
+          className="group px-1.5 text-sm text-[#F9EDFFCC] h-[28px] justify-start overflow-hidden items-center bg-green-500/30"
         >
           <span className="truncate">{label}</span>
-        </Button>
+        </Button> */}
+
+        <div className="ml-1.5">
+          <span className="truncate text-sm text-[#F9EDFFCC]">{label}</span>
+        </div>
         {onNew && (
           <Hint label={hint} side="top" align="center">
             <Button

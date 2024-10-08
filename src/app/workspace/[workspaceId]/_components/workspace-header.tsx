@@ -39,7 +39,7 @@ const WorkspaceHeader = ({ workspace, isAdmin }: WorkspaceHeaderProps) => {
           <DropdownMenuTrigger asChild>
             <Button
               variant={"tranparent"}
-              className="font-semibold text-lg w-auto p-1.5 overflow-hidden"
+              className="font-semibold tracking-tight text-lg w-auto p-1.5 overflow-hidden"
               size={"sm"}
             >
               <span className="truncate">{workspace.name}</span>
@@ -78,14 +78,22 @@ const WorkspaceHeader = ({ workspace, isAdmin }: WorkspaceHeaderProps) => {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <div className="flex items-center gap-0.5">
+        <div className="flex items-center gap-1">
           <Hint label="Filter convertations" side="bottom">
-            <Button variant={"tranparent"} size={"iconSm"} className="">
+            <Button
+              variant={"tranparent"}
+              size={"iconSm"}
+              className="border border-white/30"
+            >
               <ListFilter className="size-4" />
             </Button>
           </Hint>
           <Hint label="New message" side="bottom">
-            <Button variant={"tranparent"} size={"iconSm"} className="">
+            <Button
+              variant={"tranparent"}
+              size={"iconSm"}
+              className="border border-white/30"
+            >
               <SquarePen className="size-4" />
             </Button>
           </Hint>
