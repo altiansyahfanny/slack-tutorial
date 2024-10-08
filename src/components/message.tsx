@@ -142,7 +142,7 @@ const Message = ({
               "bg-rose-500/50 transform transition-all scale-y-0 origin-bottom duration-200"
           )}
         >
-          <div className="flex items-start gap-2">
+          <div className="flex items-start gap-2.5">
             <Hint label={formatFulltime(new Date(createdAt))}>
               <button className="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 w-[40px] leading-[22px] text-center hover:underline">
                 {format(new Date(createdAt), "hh:mm")}

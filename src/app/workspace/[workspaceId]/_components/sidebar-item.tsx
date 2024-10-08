@@ -41,7 +41,6 @@ const SidebarItem = ({ icon: Icon, id, label, variant }: SidebarItemProps) => {
         <div className="rounded-md p-0.5 size-6 grid place-content-center">
           <Icon className="size-4 shrink-0" />
         </div>
-
         <span className="text-sm truncate">{label}</span>
       </Link>
     </Button>
